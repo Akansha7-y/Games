@@ -29,6 +29,6 @@ A premium collection of classic arcade games with a modern cyberpunk aesthetic.
 ## 🎨 Design
 
 Designed with a focus on modern web aesthetics, featuring smooth gradients, micro-animations, and a responsive layout.
-
+Deployed link : https://games-rust-eight.vercel.app/
 ---
 Designed by **Akansha**.
