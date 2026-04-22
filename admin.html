@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Control Center | Admin Panel</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body class="admin-locked">
+    <!-- Simulated Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-box">
+            <div class="terminal-header">AUTHENTICATION REQUIRED</div>
+            <p>Accessing Restricted Data Stream...</p>
+            <input type="password" id="admin-pass" placeholder="Enter System Key" autofocus>
+            <button id="login-btn" class="cmd-btn">Authorize</button>
+            <a href="index.html" class="abort-link">Abort Operation</a>
+        </div>
+    </div>
+
+    <!-- Main Admin Dashboard -->
+    <div class="admin-wrapper hide" id="admin-dashboard">
+        <nav class="side-nav">
+            <div class="logo">CONTROL PANEL</div>
+            <ul>
+                <li class="active" data-tab="overview">System Overview</li>
+                <li data-tab="feedback">Feedback Registry</li>
+                <li data-tab="analytics">Game Analytics</li>
+            </ul>
+            <a href="index.html" class="back-link">Exit System</a>
+        </nav>
+
+        <main class="content-area">
+            <!-- TAB: Overview -->
+            <section id="tab-overview" class="tab-pane active">
+                <div class="pane-header">
+                    <h1>System Overview</h1>
+                    <div class="system-time" id="clock">00:00:00</div>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <label>Active Core Modules</label>
+                        <span class="value">6 Games</span>
+                    </div>
+                    <div class="metric-box">
+                        <label>Stored Feedback</label>
+                        <span class="value" id="count-feedback">0 Items</span>
+                    </div>
+                    <div class="metric-box">
+                        <label>Portal Uptime (Accumulated)</label>
+                        <span class="value" id="uptime">0m</span>
+                    </div>
+                </div>
+
+                <div class="data-table-container">
+                    <h3>Recent Feedback Nodes</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Content Snip</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="overview-feedback-list">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB: Feedback -->
+            <section id="tab-feedback" class="tab-pane">
+                <div class="pane-header">
+                    <h1>Feedback Registry</h1>
+                </div>
+                <div class="feedback-master-list" id="full-feedback-list">
+                    <!-- Cards will be populated here -->
+                </div>
+            </section>
+
+            <!-- TAB: Game Analytics -->
+            <section id="tab-analytics" class="tab-pane">
+                <div class="pane-header">
+                    <h1>Game Node Analytics</h1>
+                </div>
+                <div class="analytics-grid" id="analytics-container">
+                    <!-- Cards populated via JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match | Arcade Portal</title>
+    <link rel="stylesheet" href="memory-style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← Back to Hub</a>
+    
+    <h1>Neural Recall</h1>
+    
+    <div class="stats">
+        <div class="stat">Moves: <span id="moves">0</span></div>
+        <div class="stat">Time: <span id="timer">0:00</span></div>
+    </div>
+
+    <div class="memory-grid" id="grid">
+        <!-- Cards will be generated here -->
+    </div>
+
+    <div class="msg-container hide" id="win-msg">
+        <p id="msg">Neural Sync Complete!</p>
+        <p id="final-stats"></p>
+        <button id="new-btn">Recalibrate</button>
+    </div>
+
+    <script src="memory-app.js"></script>
+</body>
+</html>

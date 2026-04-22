@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Typing | Arcade Portal</title>
+    <link rel="stylesheet" href="typing-style.css">
+</head>
+<body>
+    <div id="selection-overlay" class="overlay">
+        <div class="selection-card">
+            <h1>Neon Typing</h1>
+            <p>Select your challenge level</p>
+            <div class="choice-group">
+                <button id="diff-medium" class="choice-btn active">Medium</button>
+                <button id="diff-hard" class="choice-btn">Hard</button>
+            </div>
+            <button id="start-game" class="start-btn">Start Practice</button>
+        </div>
+    </div>
+
+    <a href="../../index.html" class="back-btn">← Back to Hub</a>
+    
+    <main class="game-container blur">
+        <div class="stats-bar">
+            <div class="stat">Mistakes: <span id="mistakes">0</span></div>
+            <div class="stat">WPM: <span id="wpm">0</span></div>
+            <div class="stat">Accuracy: <span id="accuracy">100</span>%</div>
+        </div>
+
+        <div class="typing-area">
+            <div id="text-display" class="text-display"></div>
+            <textarea id="typing-input" class="typing-input" spellcheck="false" autofocus></textarea>
+        </div>
+
+        <button id="restart-btn" class="restart-btn">New Paragraph</button>
+    </main>
+
+    <div id="results-modal" class="modal hide">
+        <div class="modal-content">
+            <h2>Practice Complete!</h2>
+            <div class="final-stats">
+              <p>Total Mistakes: <span id="final-mistakes">0</span></p>
+              <p>Words Per Minute: <span id="final-wpm">0</span></p>
+              <p>Accuracy: <span id="final-accuracy">0</span>%</p>
+            </div>
+            <button id="modal-close" class="start-btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="typing-app.js"></script>
+</body>
+</html>

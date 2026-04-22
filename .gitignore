@@ -1,0 +1,16 @@
+# Browser and System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Local environment files
+.env
+.env.local
+
+# Node (in case you add it later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

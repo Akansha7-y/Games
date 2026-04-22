@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nodes | Arcade Portal</title>
+    <link rel="stylesheet" href="whack-style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← Back to Hub</a>
+    
+    <h1>Neon Nodes</h1>
+    
+    <div class="stats">
+        <div class="stat">Score: <span id="score">0</span></div>
+        <div class="stat">Time: <span id="time-left">30</span>s</div>
+    </div>
+
+    <div class="grid">
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+        <div class="hole"><div class="node"></div></div>
+    </div>
+
+    <div id="game-over" class="overlay hide">
+        <div class="modal">
+            <h2>Surge Contained</h2>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="start-btn">Reset Grid</button>
+        </div>
+    </div>
+
+    <script src="whack-app.js"></script>
+</body>
+</html>

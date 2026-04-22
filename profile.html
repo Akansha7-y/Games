@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Arcade Portal</title>
+    <link rel="stylesheet" href="profile-style.css">
+    <link rel="stylesheet" href="hub-style.css"> <!-- Reusing some shared variables -->
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        
+        <header class="profile-header">
+            <div class="avatar-container">
+                <div class="avatar" id="avatar-icon">👤</div>
+            </div>
+            <div class="user-info">
+                <h1 id="user-display-name">Guest Player</h1>
+                <p class="rank">Rookie Arcade Pilot</p>
+            </div>
+        </header>
+
+        <section class="performance-overview">
+            <h2>Overall Performance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Play Time</h3>
+                    <p id="total-time">0m</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Games Played</h3>
+                    <p id="total-plays">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Wins Across Arcade</h3>
+                    <p id="total-wins">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-breakdown">
+            <h2>Game Statistics</h2>
+            <div class="breakdown-grid" id="breakdown-container">
+                <!-- Data will be populated here -->
+            </div>
+        </section>
+
+        <section class="suggestions-section">
+            <h2>Help Us Improve</h2>
+            <div class="suggestion-container">
+                <form id="suggestion-form">
+                    <textarea id="suggestion-text" placeholder="Share your ideas or feedback..." required></textarea>
+                    <button type="submit" class="btn-play">Submit Suggestion</button>
+                </form>
+                <div class="suggestion-history">
+                    <h3>Your Feedback History</h3>
+                    <ul id="suggestion-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <button id="reset-data" class="reset-btn">Reset All Stats</button>
+        </footer>
+    </div>
+
+    <script src="profile-app.js"></script>
+</body>
+</html>

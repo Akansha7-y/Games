@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Breakout | Arcade Portal</title>
+    <link rel="stylesheet" href="breakout-style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← Back to Hub</a>
+    
+    <h1>Neon Breakout</h1>
+    
+    <div class="stats">
+        <div class="stat">Score: <span id="score">0</span></div>
+        <div class="stat">Lives: <span id="lives">3</span></div>
+    </div>
+
+    <div class="game-area">
+        <canvas id="breakoutCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <div id="game-over" class="overlay hide">
+        <div class="modal">
+            <h2 id="end-title">Game Over</h2>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="start-btn">Reset Core</button>
+        </div>
+    </div>
+
+    <div class="controls-hint">
+        Use Mouse or Arrow Keys to move Paddle
+    </div>
+
+    <script src="breakout-app.js"></script>
+</body>
+</html>

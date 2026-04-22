@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Portal | Cyberpunk Games</title>
+    <link rel="stylesheet" href="hub-style.css">
+    <meta name="description" content="A premium collection of classic arcade games with a modern cyberpunk aesthetic.">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="admin-access">
+                <a href="admin.html" class="admin-btn">⚙️ Admin</a>
+            </div>
+            <div class="user-bar">
+                <a href="profile.html" class="profile-card">
+                    <span class="profile-icon">👤</span>
+                    <div class="profile-text">
+                        <span class="user-name">Guest Player</span>
+                        <span class="user-rank" id="hub-rank">Rookie</span>
+                    </div>
+                </a>
+            </div>
+            <h1 class="float">Arcade Portal</h1>
+            <p class="subtitle">Enter the neon realm of classic games</p>
+        </header>
+
+        <main class="game-grid">
+            <!-- Rock Paper Scissors -->
+            <a href="games/rock-paper-scissors/rockindex.html" class="game-card" id="game-rps">
+                <div class="game-icon">✊</div>
+                <h2>Battle of Hands</h2>
+                <p>Test your intuition against the computer in this high-stakes classic of Rock, Paper, Scissors.</p>
+                <button class="btn-play">Enter Arena</button>
+            </a>
+
+            <!-- Tic Tac Toe -->
+            <a href="games/tic-tac-toe/tictactoeindex.html" class="game-card" id="game-ttt">
+                <div class="game-icon">❌</div>
+                <h2>Neon Strategy</h2>
+                <p>A battle of circles and crosses. Can you outsmart your opponent in the grid of destiny?</p>
+                <button class="btn-play">Challenge Now</button>
+            </a>
+
+            <!-- Memory Match -->
+            <a href="games/memory-match/memory-index.html" class="game-card" id="game-memory">
+                <div class="game-icon">🧠</div>
+                <h2>Neural Recall</h2>
+                <p>Sharpen your focus and match the pairs. How fast can you sync your neural pathways?</p>
+                <button class="btn-play">Enter Logic</button>
+            </a>
+
+            <!-- Typing Test -->
+            <a href="games/typing-test/typing-index.html" class="game-card" id="game-typing">
+                <div class="game-icon">⌨️</div>
+                <h2>Neon Typing</h2>
+                <p>Master the keys with lightning speed. Track your mistakes and achieve peak performance.</p>
+                <button class="btn-play">Begin Test</button>
+            </a>
+
+            <!-- Cyber Snake -->
+            <a href="games/snake/snake-index.html" class="game-card" id="game-snake">
+                <div class="game-icon">🐍</div>
+                <h2>Cyber-Snake</h2>
+                <p>Navigate the neon grid. Consume data nodes to grow your trail but avoid system collisions.</p>
+                <button class="btn-play">Engage Core</button>
+            </a>
+
+            <!-- Neon Nodes -->
+            <a href="games/whack-a-mole/whack-index.html" class="game-card" id="game-whack">
+                <div class="game-icon">🎯</div>
+                <h2>Neon Nodes</h2>
+                <p>A high-speed surge is occurring. Tap the active nodes to contain the viral outbreak!</p>
+                <button class="btn-play">Start Containment</button>
+            </a>
+
+            <!-- Flappy Neon -->
+            <a href="games/flappy-neon/flappy-index.html" class="game-card" id="game-flappy">
+                <div class="game-icon">⚡</div>
+                <h2>Flappy Neon</h2>
+                <p>Navigate a high-voltage neon spark through systemic obstacles using pulse jumps.</p>
+                <button class="btn-play">Ignite Spark</button>
+            </a>
+
+            <!-- Neon Breakout -->
+            <a href="games/breakout/breakout-index.html" class="game-card" id="game-breakout">
+                <div class="game-icon">🧱</div>
+                <h2>Neon Breakout</h2>
+                <p>Use light-refracting paddles to clear crystalline data bricks from the system core.</p>
+                <button class="btn-play">Engage Core</button>
+            </a>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Arcade Portal. Designed by Antigravity.</p>
+            <a href="admin.html" class="admin-link">Admin Portal</a>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stats = JSON.parse(localStorage.getItem('arcade_stats')) || {};
+            let totalWins = 0;
+            let totalPlays = 0;
+            
+            if (stats.rockPaperScissors) { totalWins += stats.rockPaperScissors.wins; totalPlays += stats.rockPaperScissors.plays; }
+            if (stats.ticTacToe) { totalWins += stats.ticTacToe.wins; totalPlays += stats.ticTacToe.plays; }
+            if (stats.memoryMatch) { totalWins += stats.memoryMatch.plays; totalPlays += stats.memoryMatch.plays; }
+            if (stats.typingTest) { totalWins += stats.typingTest.plays; totalPlays += stats.typingTest.plays; }
+            if (stats.snake) { totalWins += stats.snake.plays; totalPlays += stats.snake.plays; }
+            if (stats.whackAMole) { totalWins += stats.whackAMole.plays; totalPlays += stats.whackAMole.plays; }
+            if (stats.flappyNeon) { totalWins += stats.flappyNeon.plays; totalPlays += stats.flappyNeon.plays; }
+            if (stats.breakout) { totalWins += stats.breakout.plays; totalPlays += stats.breakout.plays; }
+
+            const rankEl = document.getElementById('hub-rank');
+            if (totalPlays === 0) rankEl.innerText = "Rookie";
+            else if (totalWins > 50) rankEl.innerText = "Overlord";
+            else if (totalWins > 20) rankEl.innerText = "Elite";
+            else if (totalWins > 5) rankEl.innerText = "Neo-Gamer";
+            else rankEl.innerText = "Rising";
+        });
+    </script>
+</body>
+</html>
